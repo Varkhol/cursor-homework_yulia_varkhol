@@ -31,7 +31,7 @@ const calculatesalaryWithoutTax = (salary, incomeTax, militaryTax) => {
 }
 
 const randomNumber = (n, m) => {
-    const randomNumber = Math.floor(Math.random() * (m)) + 1;
+    const randomNumber = Math.floor(Math.random() * (m - n + 1)) + n;
     document.writeln("<li class = 'task-item'>Функція №5: " + "Випадкове число: " + randomNumber + "</li>");
 }
 
@@ -39,7 +39,7 @@ const countLetter = (letter, word) => {
     let count = 0;
     const letterArray = word.toLowerCase().split('');
 
-    for(let i = 1; i < letterArray.length; i++) {
+    for(let i = 0; i < letterArray.length; i++) {
         
         if (letterArray[i].toLowerCase() === letter.toLowerCase()) {
             count++;

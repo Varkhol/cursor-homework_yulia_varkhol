@@ -9,7 +9,6 @@ const getMaxDigit = (number) => {
 
 const numberToPower = (number, power) => {
     let result = number;
-    //power = parseInt(power);
 
     if (power === 0) {
         result = 1;
@@ -42,8 +41,6 @@ const calculatesalaryWithoutTax = (salary, incomeTax, militaryTax) => {
 }
 
 const randomNumber = (n, m) => {
-    // n = parseInt(n);
-    // m = parseInt(m);
     const randomNumber = Math.floor(Math.random() * (m - n + 1)) + n;
     document.writeln("<li class = 'task-item'>Функція №5: " + "Випадкове число: " + randomNumber + "</li>");
 }

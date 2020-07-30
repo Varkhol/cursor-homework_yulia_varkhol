@@ -20,7 +20,7 @@ const getPairs = (students) => {
     });
 
     for (let i = 0; i < girls.length; i++) {
-        pairs.push("[" +girls[i] + "," + boys[i] + "]");
+        pairs.push("[" + girls[i] + "," + boys[i] + "]");
     }
 
     return pairs;
@@ -42,7 +42,7 @@ const getStudentsWithMarks = (students, marks) => {
     const studentsWithMarks = [];
 
     for (let i = 0; i < students.length; i++) {
-        studentsWithMarks.push("[" +students[i] + ":" + marks[i] + "]");
+        studentsWithMarks.push("[" + students[i] + ":" + marks[i] + "]");
     }
 
     return studentsWithMarks;
@@ -64,10 +64,10 @@ const studentPairsWithThemes = getPairsWithThemes(studentPairs, themes);
 const studentsWithMarks = getStudentsWithMarks(students, marks);
 const studentPairsWithRandomMarks = getPairsWithRandomMarks(studentPairs);
 
-document.writeln("<li class = 'task-item'>Функція №1: Пари студентів - > "  + studentPairs + "</li>");
-document.writeln("<li class = 'task-item'>Функція №2: Зіставлення  пар студентів з темами проєктів - > "  + studentPairsWithThemes + "</li>");
-document.writeln("<li class = 'task-item'>Функція №3: Зіставлення  студентів з оцінками - > "  + studentsWithMarks + "</li>");
-document.writeln("<li class = 'task-item'>Функція №4: Зіставлення  пар студентів з випадковими оцінками - > "  + studentPairsWithRandomMarks + "</li>");
+document.writeln("<li class = 'task-item'>Функція №1: Пари студентів - > " + studentPairs + "</li>");
+document.writeln("<li class = 'task-item'>Функція №2: Зіставлення  пар студентів з темами проєктів - > " + studentPairsWithThemes + "</li>");
+document.writeln("<li class = 'task-item'>Функція №3: Зіставлення  студентів з оцінками - > " + studentsWithMarks + "</li>");
+document.writeln("<li class = 'task-item'>Функція №4: Зіставлення  пар студентів з випадковими оцінками - > " + studentPairsWithRandomMarks + "</li>");
 
 
 document.writeln("</ol>");

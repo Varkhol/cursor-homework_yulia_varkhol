@@ -4,7 +4,7 @@ document.writeln("<ol class='tasks-list'>");
 
 const getMaxDigit = (number) => {
     const digitArray = number.split('');
-    document.writeln("<li class = 'task-item'>Функція №1: " + "Найбільша цифра в числі: " + Math.max(...digitArray) + "</li>");
+    return Math.max(...digitArray);
 }
 
 const numberToPower = (number, power) => {
@@ -23,26 +23,30 @@ const numberToPower = (number, power) => {
         result = 1 / result;
     }
 
-    document.writeln("<li class = 'task-item'>Функція №2: " + "Число " + number + " в степіні " + power + " дорівнює " + result + "</li>");
+    return result;
 }
 
 const makeFirstLetterCapital = (name) => {
-    while (name === "") {
-        prompt("Ви ввели пусту строку, спробуйте ще раз")
+    while (!name) {
+        name = prompt("Ви ввели пусту строку, спробуйте ще раз")
     }
 
     const formatedName = name[0].toUpperCase() + name.slice(1).toLowerCase();
-    document.writeln("<li class = 'task-item'>Функція №3: " + "Відформатоване ім'я: " + formatedName + "</li>");
+
+    return formatedName;
 }
 
 const calculatesalaryWithoutTax = (salary, incomeTax, militaryTax) => {
     const pureSalary = salary - salary * ((Number(incomeTax) + Number(militaryTax)) / 100);
-    document.writeln("<li class = 'task-item'>Функція №4: " + "Ваша чиста зарплата: " + pureSalary + "</li>");
+
+    return pureSalary;
+
 }
 
 const randomNumber = (n, m) => {
     const randomNumber = Math.floor(Math.random() * (m - n + 1)) + n;
-    document.writeln("<li class = 'task-item'>Функція №5: " + "Випадкове число: " + randomNumber + "</li>");
+
+    return randomNumber;
 }
 
 const countLetter = (letter, word) => {
@@ -55,16 +59,35 @@ const countLetter = (letter, word) => {
             count++;
         }
     }
-    document.writeln("<li class = 'task-item'>Функція №6: " + "У вашому слові " + word + " " + "зустрічається " + count + " букв " + "`" + letter + "`" + "</li>");
+
+    return count;
+
 
 }
 
-getMaxDigit(prompt("Функція №1: Введіть число"));
-numberToPower(+prompt("Функція №2: Введіть число"), +prompt("Функція №2: Введіть степінь"));
-makeFirstLetterCapital(prompt("Функція №3: Введіть ім'я"));
-calculatesalaryWithoutTax(prompt("Функція №4: Введіть вашу зарплату"), prompt("Функція №4: Введіть податок на доходи фізичних осіб у відсотках"), prompt("Функція №4: Введіть податок на військовий збір у відсотках"));
-randomNumber(+prompt("Функція №5: Введіть нижню границю випадкового числа"), +prompt("Функція №5: Введіть верхню границю випадкового числа"));
-countLetter(prompt("Функція №6: Введіть букву, яку потрібно порахувати в слові"), prompt("Функція №6: Введіть саме слово"));
+
+document.writeln("<li class = 'task-item'>Функція №1: " + "Найбільша цифра в числі: " + getMaxDigit(prompt("Функція №1: Введіть число")) + "</li>");
+
+const number = +prompt("Функція №2: Введіть число");
+const power = +prompt("Функція №2: Введіть степінь");
+document.writeln("<li class = 'task-item'>Функція №2: " + "Число " + number + " в степіні " + power + " дорівнює " + numberToPower(number, power) + "</li>");
+
+const name = makeFirstLetterCapital(prompt("Функція №3: Введіть ім'я"));
+document.writeln("<li class = 'task-item'>Функція №3: " + "Відформатоване ім'я: " + makeFirstLetterCapital(name) + "</li>");
+
+const salary = prompt("Функція №4: Введіть вашу зарплату");
+const incomeTax = prompt("Функція №4: Введіть податок на доходи фізичних осіб у відсотках");
+const militaryTax = prompt("Функція №4: Введіть податок на військовий збір у відсотках");
+document.writeln("<li class = 'task-item'>Функція №4: " + "Ваша чиста зарплата: " + calculatesalaryWithoutTax(salary, incomeTax, militaryTax) + "</li>");
+
+const n = +prompt("Функція №5: Введіть нижню границю випадкового числа");
+const m = +prompt("Функція №5: Введіть верхню границю випадкового числа");
+document.writeln("<li class = 'task-item'>Функція №5: " + "Випадкове число: " + randomNumber(n, m) + "</li>");
+
+const letter = prompt("Функція №6: Введіть букву, яку потрібно порахувати в слові");
+const word = prompt("Функція №6: Введіть саме слово");
+
+document.writeln("<li class = 'task-item'>Функція №6: " + "У вашому слові " + word + " " + "зустрічається " + countLetter(letter, word) + " букв " + "`" + letter + "`" + "</li>");
 
 document.writeln("</ol>");
 document.writeln("</div>")

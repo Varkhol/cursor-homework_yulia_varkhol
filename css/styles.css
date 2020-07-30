@@ -1,17 +1,28 @@
-body{
+body {
     background-color: lightgreen;
 }
-.container{
+
+.container {
     width: 1140px;
     margin: auto;
     background-color: grey;
 }
 
-.tasks-list{
-    border: 2px dashed red;
+h1 {
+    color: blue;
+    text-align: center;
 }
 
-.task-item{
+ol {
+    padding-bottom: 30px;
+}
+
+.tasks-list {
+    border: 2px dashed red;
+    list-style-type: disc;
+}
+
+.task-item {
     line-height: 2;
     color: darkblue;
     font-weight: 600;

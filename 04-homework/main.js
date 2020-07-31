@@ -48,12 +48,12 @@ const getStudentsWithMarks = (students, marks) => {
     return studentsWithMarks;
 }
 
-const getPairsWithRandomMarks = (pairs) => {
+const getPairsWithRandomMarks = (pairsWithThemes) => {
 
     const pairsWithRandomMarks = [];
 
-    for (let i = 0; i < pairs.length; i++) {
-        pairsWithRandomMarks.push("[" + pairs[i] + ":" + (Math.floor(Math.random() * (5)) + 1) + "]");
+    for (let i = 0; i < pairsWithThemes.length; i++) {
+        pairsWithRandomMarks.push("[" + pairsWithThemes[i] + ":" + (Math.floor(Math.random() * (5)) + 1) + "]");
     }
 
     return pairsWithRandomMarks;
@@ -62,7 +62,7 @@ const getPairsWithRandomMarks = (pairs) => {
 const studentPairs = getPairs(students);
 const studentPairsWithThemes = getPairsWithThemes(studentPairs, themes);
 const studentsWithMarks = getStudentsWithMarks(students, marks);
-const studentPairsWithRandomMarks = getPairsWithRandomMarks(studentPairs);
+const studentPairsWithRandomMarks = getPairsWithRandomMarks(studentPairsWithThemes);
 
 document.writeln("<li class = 'task-item'>Функція №1: Пари студентів - > " + studentPairs + "</li>");
 document.writeln("<li class = 'task-item'>Функція №2: Зіставлення  пар студентів з темами проєктів - > " + studentPairsWithThemes + "</li>");

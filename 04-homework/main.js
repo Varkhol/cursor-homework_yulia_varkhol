@@ -20,7 +20,7 @@ const getPairs = (students) => {
     });
 
     for (let i = 0; i < girls.length; i++) {
-        pairs.push("[" + girls[i] + "," + boys[i] + "]");
+        pairs.push(`[${girls[i]}, ${boys[i]} ]`);
     }
 
     return pairs;
@@ -31,7 +31,7 @@ const getPairsWithThemes = (pairs, themes) => {
     const pairsWithProjectThem = [];
 
     for (let i = 0; i < pairs.length; i++) {
-        pairsWithProjectThem.push("[" + pairs[i] + ":" + themes[i] + "]");
+        pairsWithProjectThem.push(`[${pairs[i]}:${themes[i]}]`);
     }
 
     return pairsWithProjectThem;
@@ -42,7 +42,7 @@ const getStudentsWithMarks = (students, marks) => {
     const studentsWithMarks = [];
 
     for (let i = 0; i < students.length; i++) {
-        studentsWithMarks.push("[" + students[i] + ":" + marks[i] + "]");
+        studentsWithMarks.push(`[${students[i]}:${marks[i]}]`);
     }
 
     return studentsWithMarks;
@@ -53,7 +53,7 @@ const getPairsWithRandomMarks = (pairsWithThemes) => {
     const pairsWithRandomMarks = [];
 
     for (let i = 0; i < pairsWithThemes.length; i++) {
-        pairsWithRandomMarks.push("[" + pairsWithThemes[i] + ":" + (Math.floor(Math.random() * (5)) + 1) + "]");
+        pairsWithRandomMarks.push(`[${pairsWithThemes[i]}:${(Math.floor(Math.random() * (5)) + 1)}]`);
     }
 
     return pairsWithRandomMarks;

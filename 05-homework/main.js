@@ -1,60 +1,57 @@
 const getRandomArray = (length, min, max) => {
     const randomArray = [];
+
     for (let i = 0; i < length; i++) {
         randomArray.push(Math.floor(Math.random() * (max - min + 1)) + min);
     }
+
     return randomArray;
 }
 
 const getAverage = (numbers) => {
-    numbers = numbers.split(",").map(Number);
+    const arr = numbers.split(',').map(item => Number(item));
     let sum = 0;
 
-    numbers.forEach(element => {
+    arr.forEach(element => {
         if (Number.isInteger(element)) {
             sum += element;
         }
     });
 
-    return sum / (numbers.length);
+    return (arr.reduce((acum,cur) => acum + cur,0))/arr.length;
 }
 
+
+
 const getMedian = (numbers) => {
-    numbers = numbers.split(",").map(Number);
+    const arr = numbers.split(',').map(item => Number(item));
 
-    const array = [];
-    numbers.forEach(element => {
-        if (Number.isInteger(element)) {
-            array.push(element);
-        }
-    });
-
-    array.sort((a, b) => a - b);
-    console.log(array.length % 2);
+    arr.sort((a, b) => a - b);
     let median = 0;
 
-    if (array.length % 2 === 0) {
-        median = 0.5 * (array[(array.length / 2) - 1] + array[array.length / 2]);
+    if (arr.length % 2 === 0) {
+        median = 0.5 * (arr[(arr.length / 2) - 1] + arr[arr.length / 2]);
     } else {
-        median = array[Math.floor(array.length / 2)];
+        median = arr[Math.floor(arr.length / 2)];
 
     }
+
     return median;
 }
 
 const filterEvenNumbers = (numbers) => {
-    numbers = numbers.split(",").map(Number);
-    return numbers.filter(number => number % 2 > 0);
+    const arr = numbers.split(',').map(item => Number(item));
+    return arr.filter(number => number % 2 > 0);
 }
 
 const countPositiveNumbers = (numbers) => {
-    numbers = numbers.split(",").map(Number);
-    return numbers.filter(number => number > 0).length;
+    const arr = numbers.split(',').map(item => Number(item));
+    return arr.filter(number => number > 0).length;
 }
 
 const getDividedByFive = (numbers) => {
-    numbers = numbers.split(",").map(Number);
-    return numbers.filter(number => number % 5 === 0);
+    const arr = numbers.split(',').map(item => Number(item));
+    return arr.filter(number => number % 5 === 0);
 }
 
 const replaceBadWords = (sentence) => {
@@ -69,6 +66,7 @@ const replaceBadWords = (sentence) => {
         }
 
     });
+    
     return sentenceWithoutBadWords.join(" ");
 }
 

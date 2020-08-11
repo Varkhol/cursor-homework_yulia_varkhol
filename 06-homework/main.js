@@ -32,34 +32,24 @@ const getSubjects = (student) => {
 };
 
 const getAverage = (...numbers) => {
-    const arr = numbers.slice(0);
-    let sum = 0;
+    const arr = numbers;
 
-    arr.forEach(element => {
-        if (Number.isInteger(element)) {
-            sum += element;
-        }
-    });
-
-    return ((arr.reduce((acum, cur) => acum + cur, 0)) / arr.length).toFixed(2);
+    return parseFloat(((arr.reduce((acum, cur) => acum + cur, 0)) / arr.length).toFixed(2));
 }
 
 const getAverageMark = (student) => {
     const marksList = Object.values(students[student].subjects);
-    const studentName = students[student].name;
 
     return getAverage(...marksList.flat());
 };
 
 const getStudentInfo = (student) => {
-    const studentName = students[student].name;
     const studentCourse = students[student].course;
-    return `Name: ${studentName}; Course: ${studentCourse}; Average mark: ${getAverageMark(student)}`;
+    return `Course: ${studentCourse}; Average mark: ${getAverageMark(student)}`;
 };
 
 const getStudentsNames = (students) => {
-    const nameList = students.map((student) => student.name).sort();
-    return nameList;
+    return students.map((student) => student.name).sort();;
 };
 
 const getBestStudent = (students) => {

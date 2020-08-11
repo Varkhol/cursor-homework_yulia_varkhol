@@ -14,11 +14,11 @@ function getTotalTaxes() {
     return this.middleSalary * this.tax * this.vacancies;
 }
 
-function getMySalary(country) {
-    const taxValue = country.tax;
+function getMySalary() {
+    const taxValue = this.tax;
     const salary = Math.floor(Math.random() * (2000 - 1500 + 1)) + 1500;
-    const taxes = (salary * taxValue).toFixed(2);
-    const profit = (salary - taxes).toFixed(2);
+    const taxes = parseFloat((salary * taxValue).toFixed(2));
+    const profit = parseFloat((salary - taxes).toFixed(2));
 
     return { salary, taxes, profit };
 }
@@ -44,9 +44,9 @@ document.writeln("<li class = 'task-item'>Функція №3: Сумарний 
 
 document.writeln("<li class = 'task-item'>Функція №4: Моя ЗП в країнах - > (Вивід в консоль) </li>");
 const timeValue = 10000;
-const timerUkraine = setInterval(() => console.log("Ukraine: " + Object.entries(getMySalary(ukraine))), timeValue);
-const timerLatvia = setInterval(() => console.log("Latvia: " + Object.entries(getMySalary(latvia))), timeValue);
-const timerLitva = setInterval(() => console.log("Litva: " + Object.entries(getMySalary(litva))), timeValue);
+setInterval(() => console.log("Ukraine: " + Object.entries(getMySalary.call(ukraine))), timeValue);
+setInterval(() => console.log("Latvia: " + Object.entries(getMySalary.call(latvia))), timeValue);
+setInterval(() => console.log("Litva: " + Object.entries(getMySalary.call(litva))), timeValue);
 
 document.writeln("</ol>");
 document.writeln("</div>")

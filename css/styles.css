@@ -27,3 +27,27 @@ ol {
     color: darkblue;
     font-weight: 600;
 }
+
+.refresh-btn {
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: teal;
+    color: white;
+    font-size: medium;
+    margin: 15px auto;
+    display: block;
+    padding: 10px;
+    outline: none;
+}
+
+.box-container {
+    margin: auto;
+    width: 260px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.block {
+    border: 1px solid white;
+}

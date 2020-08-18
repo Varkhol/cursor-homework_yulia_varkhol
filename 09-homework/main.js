@@ -1,3 +1,6 @@
+const blocksCount = 25;
+let interval;
+
 const generateRandomColor = () => {
     const characters = '0123456789ABCDEF';
     let color = '#';
@@ -9,7 +12,7 @@ const generateRandomColor = () => {
 };
 
 const createBoxForColors = () => {
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < blocksCount; i++) {
         let box = document.createElement("div");
         box.className = "block";
         document.querySelector(".box-container").append(box);
@@ -47,6 +50,14 @@ const generateBlocks = () => {
     createBoxForColors();
     setBlockSize();
     setRandomColor();
+};
+
+const generateBlocksInterval = () => {
+    interval = setInterval(() => generateBlocks(), 1000);
+};
+
+const stopGenerateBlocks = () => {
+    clearInterval(interval);
 };
 
 document.writeln("<div class='box-container'>")

@@ -34,10 +34,15 @@ ol {
     background-color: teal;
     color: white;
     font-size: medium;
-    margin: 15px auto;
+    margin: 15px;
     display: block;
     padding: 10px;
     outline: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
 }
 
 .box-container {

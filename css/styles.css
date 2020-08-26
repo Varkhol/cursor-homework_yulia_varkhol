@@ -87,3 +87,19 @@ ol {
 .audio-body {
     background-color: transparent;
 }
+
+.result {
+    width: fit-content;
+    height: 30px;
+    margin: 10px auto;
+    font-size: x-large;
+}
+
+.btn {
+    display: block;
+    margin: 10px auto;
+}
+
+.form {
+    text-align: center;
+}

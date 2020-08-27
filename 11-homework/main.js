@@ -8,10 +8,10 @@ const getRandomChinese = (length) => {
 
         setTimeout(() => {
             let characters = [];
-            let sign = parseInt(Date.now().toString().slice(-length));
+            let sign = parseInt(Date.now().toString().slice(-5));
 
             for (let i = 0; i < length; i++) {
-                sign += i;
+                sign += DELAY;
                 characters.push(sign);
             }
 

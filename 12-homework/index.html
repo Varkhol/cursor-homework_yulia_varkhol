@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html class="starwars">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Homework #12: Server </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+    <link href="../css/styles.css" type="text/css" rel="stylesheet">
+</head>
+
+<body class="starwars-body">
+    <h1>Homework #12: Server</h1>
+    <div class="sw-logo">
+        <img src="../img/sw_logo.png" alt="Star Wars">
+    </div>
+    <div class="show-buttons">
+        <button id="displayCharacters" class="glow-on-hover sw-btn">Display characters</button>
+        <button id="displayPlanets" class="glow-on-hover sw-btn">Display planets</button>
+    </div>
+    <div class="pagination-buttons">
+        <button id="prev" class="glow-on-hover sw-btn">Previous</button>
+        <button id="next" class="glow-on-hover sw-btn">Next</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./main.js"> </script>
+    <audio id="audio" src="../audio/sw4lightsabre.mp3"></audio>
+</body>
+</html>

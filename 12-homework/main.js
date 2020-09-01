@@ -13,9 +13,8 @@ let page = 1;
 
 const getCharactersByFilm = (filmIndex = 5) => {
     const config = {
-        maxRedirects: 0,
         method: 'GET',
-        url: BASE + 'films/' + filmIndex
+        url: BASE + 'films/' + filmIndex +'/'
     };
     try {
         return axios(config).then((res) => {

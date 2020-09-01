@@ -13,6 +13,7 @@ let page = 1;
 
 const getCharactersByFilm = (filmIndex = 5) => {
     const config = {
+        maxRedirects: 0,
         method: 'GET',
         url: BASE + 'films/' + filmIndex
     };

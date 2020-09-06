@@ -167,7 +167,7 @@ ol {
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
     top: -2px;
-    left:-2px;
+    left: -2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
@@ -204,9 +204,17 @@ ol {
 }
 
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
 }
 
 .sw-logo {
@@ -223,6 +231,29 @@ ol {
     border: 1px solid yellow;
 }
 
-.show-buttons, .pagination-buttons {
+.show-buttons,
+.pagination-buttons {
     text-align: center;
+}
+
+.show-id,
+.show-font {
+    text-align: center;
+    margin: 10px 0;
+    vertical-align: middle;
+}
+
+.id-value,
+.font-value {
+    width: fit-content;
+    height: fit-content;
+}
+
+#generate-id,
+#generate-down-font,
+#generate-up-font {
+    border-radius: 15px;
+    background-color: cornflowerblue;
+    padding: 5px;
+    outline: none;
 }

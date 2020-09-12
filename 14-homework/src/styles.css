@@ -1,0 +1,38 @@
+body {
+    background-color: lightgreen;
+    color: blue;
+}
+
+h1 {
+    text-align: center;
+}
+
+.webpack-logo {
+    text-align: center;
+}
+
+.item {
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid green;
+}
+
+.characters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: yellow;
+}
+
+.character {
+    border: 1px solid blue;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 10px;
+    color: yellow;
+}
+
+.characters-title {
+    text-align: center;
+}

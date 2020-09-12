@@ -61,10 +61,7 @@ const countLetter = (letter, word) => {
     }
 
     return count;
-
-
 }
-
 
 document.writeln("<li class = 'task-item'>Функція №1: " + "Найбільша цифра в числі: " + getMaxDigit(prompt("Функція №1: Введіть число")) + "</li>");
 

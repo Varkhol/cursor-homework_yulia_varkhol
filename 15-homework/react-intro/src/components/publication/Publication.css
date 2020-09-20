@@ -1,0 +1,89 @@
+.publication-container {
+    width: 50%;
+    margin: auto;
+    border: 2px solid #3740a3;
+    border-radius: 3%;
+    padding: 15px;
+    background-color: #727ad4;
+}
+
+.publication-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.author-publication-img {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 15px 0 0;
+}
+
+.author-name {
+    margin: 0 5px 0 0;
+}
+
+.publication-text {
+    color: white;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.publication-img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 3%;
+}
+
+.publication-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 20px;
+    margin: 10px 0 0 10px;
+    color: white;
+}
+
+.like {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 15px 0 0;
+}
+
+.like-icon {
+    width: 20px;
+    margin: 0 10px 0 0;
+    fill: #fff;
+}
+
+.like-icon:hover {
+    fill: red;
+}
+
+.active-icon {
+    fill: gold;
+    width: 15px;
+    margin: 0 15px 0 0;
+}
+
+.comment-icon {
+    width: 20px;
+    margin: 0 10px 0 0;
+    fill: #fff;
+}
+
+.comment-icon:hover {
+    fill: yellow;
+}
+
+.comment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 15px 0 0;
+}
